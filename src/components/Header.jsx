@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Drawer } from 'antd';
+import { Drawer, Spin } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import { FaFacebook, FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
@@ -17,6 +17,7 @@ function Header() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true';
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -50,7 +51,11 @@ function Header() {
   };
 
   const handleLanguageChange = (countryCode) => {
-    i18n.changeLanguage(countryCode === 'US' ? 'en' : 'fr');
+    setLoading(true);
+    setTimeout(() => {
+      i18n.changeLanguage(countryCode === 'US' ? 'en' : 'fr');
+      setLoading(false);
+    }, 1000); // 1 second delay
   };
 
   const toggleDarkMode = () => {
@@ -63,7 +68,7 @@ function Header() {
         <div className="text-lg font-semibold">
           <Link to="/">
             <h1 className='font-montserrat-alt text-[#] dark:text-slate-50 text-light-text'>
-              Multi<span className='dark:text-gray-300 text-[#FF5722]'>prime</span>
+              Multi_<span className='dark:text-gray-300 text-[#FF5722]'>Prime</span>
             </h1>
           </Link>
         </div>
@@ -123,13 +128,17 @@ function Header() {
           <button onClick={toggleDarkMode} className="hover:text-gray-400 dark:text-slate-50 text-[#414760]">
             {darkMode ? <MdOutlineLightMode size={24} /> : <MdOutlineDarkMode size={24} />}
           </button>
-          <ReactFlagsSelect
-            countries={["US", "FR"]}
-            customLabels={{ US: "EN", FR: "FR" }}
-            selected={i18n.language === 'en' ? 'US' : 'FR'}
-            onSelect={handleLanguageChange}
-            className="custom-flag-select text-[#414760] dark:text-slate-50 pr-8"
-          />
+          {loading ? (
+            <Spin />
+          ) : (
+            <ReactFlagsSelect
+              countries={["US", "FR"]}
+              customLabels={{ US: "EN", FR: "FR" }}
+              selected={i18n.language === 'en' ? 'US' : 'FR'}
+              onSelect={handleLanguageChange}
+              className="custom-flag-select text-[#414760] dark:text-slate-50 pr-8"
+            />
+          )}
           <a href="https://www.facebook.com/kongnyuy.simeon.3?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className=" dark:hover:text-gray-400 dark:text-slate-50 text-light-text hover:text-[#FF5722]">
             <FaFacebook size={20} />
           </a>
@@ -144,15 +153,19 @@ function Header() {
           <button onClick={toggleDarkMode} className="hover:text-gray-400 dark:text-slate-50 text-[#414760]">
             {darkMode ? <MdOutlineLightMode size={24} /> : <MdOutlineDarkMode size={24} />}
           </button>
-          <ReactFlagsSelect
-            countries={["US", "FR"]}
-            customLabels={{ US: "EN", FR: "FR" }}
-            selected={i18n.language === 'en' ? 'US' : 'FR'}
-            onSelect={handleLanguageChange}
-            className="custom-flag-select"
-          />
-          <button onClick={showDrawer} className="dark:text-slate-50 text-light-text">
-            <MenuOutlined size={30} />
+          {loading ? (
+            <Spin  />
+          ) : (
+            <ReactFlagsSelect
+              countries={["US", "FR"]}
+              customLabels={{ US: "EN", FR: "FR" }}
+              selected={i18n.language === 'en' ? 'US' : 'FR'}
+              onSelect={handleLanguageChange}
+              className="custom-flag-select"
+            />
+          )}
+          <button onClick={showDrawer} className="dark:text-slate-50 text-light-text hover:text-[#FF5722]">
+            <MenuOutlined className="text-xl" />
           </button>
         </div>
       </div>
