@@ -18,6 +18,7 @@ function Header() {
     return localStorage.getItem('darkMode') === 'true';
   });
   const [loading, setLoading] = useState(false);
+  const [headerBackground, setHeaderBackground] = useState('transparent');
 
   useEffect(() => {
     if (darkMode) {
@@ -27,6 +28,30 @@ function Header() {
     }
     localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (darkMode) {
+        if (window.scrollY > 50) {
+          setHeaderBackground('#1a1a1a'); // Dark mode header background color when scrolled
+        } else {
+          setHeaderBackground('transparent');
+        }
+      } else {
+        if (window.scrollY > 50) {
+          setHeaderBackground('#FFFFFF'); // Light mode header background color when scrolled
+        } else {
+          setHeaderBackground('transparent');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [darkMode]);
+
 
   const showDrawer = () => {
     setVisible(true);
@@ -63,12 +88,12 @@ function Header() {
   };
 
   return (
-    <div className="bg-light-body dark:bg-dark-body transition-colors">
+    <div style={{ backgroundColor: headerBackground }} className="fixed w-full z-50 transition-colors">
       <div className='flex justify-between w-full lg:w-4/5 mx-auto items-center py-4 px-6 md:px-0 font-inter sticky top-0 z-50'>
         <div className="text-lg font-semibold">
           <Link to="/">
-            <h1 className='font-montserrat-alt text-[#] dark:text-slate-50 text-light-text'>
-              Multi_<span className='dark:text-gray-300 text-[#FF5722]'>Prime</span>
+            <h1 className='font-inter text-[#] dark:text-slate-50 text-light-text'>
+              Multi_<span className='dark:text-gray-300 text-[#FF5722] font-montserrat-alt'>Prime</span>
             </h1>
           </Link>
         </div>

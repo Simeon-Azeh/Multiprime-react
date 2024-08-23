@@ -11,6 +11,9 @@ function Home() {
       <div>
         <Hero />
       </div>
+      <div>
+        <Hero />
+      </div>
     </div>
   )
 }

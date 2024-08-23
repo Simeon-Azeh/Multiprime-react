@@ -33,34 +33,34 @@ function Hero() {
   }, []);
 
   return (
-    <div className='bg-light-body dark:bg-dark-body transition-colors h-[100vh] flex items-center justify-center dot-pattern pt-20 md:pt-0'>
-      <div className='w-full md:w-4/5 mx-auto px-4 font-Inter text-center'>
-        <div className='flex flex-col md:flex-row items-center justify-center'>
+    <div className='bg-light-body dark:bg-dark-body transition-colors h-[100vh] flex items-center justify-center dot-pattern pt-10 md:pt-0'>
+      <div className='w-full md:w-4/5 mx-auto px-4 lg:px-0 font-Inter text-center'>
+        <div className='flex flex-col md:flex-row items-center justify-center '>
           <div className='w-full md:w-1/2 text-center md:text-left'>
           
-            <h2 className='relative overflow-hidden inline-block text-3xl lg:text-3xl font-medium dark:text-slate-50 text-[#37474F] font-inter' data-aos="fade-up" data-aos-delay="400">
-              {t('nothing_beats')} <span className='dark:text-slate-300 text-[#FF5722]'>{t('prime')}</span> {t('entertainment')}
+            <h2 className='relative overflow-hidden inline-block text-2xl lg:text-5xl font-medium dark:text-slate-50 text-[#37474F] font-inter  ' data-aos="fade-up" data-aos-delay="400">
+              {t('nothing_beats')} <span className='dark:text-slate-300 text-[#FF5722]'>{t('prime')}</span> {t('entertainment')} <span className='dark:text-slate-300 text-[#FF5722]'>{t('like_prime')}</span>
             </h2>
-            <p className='mt-4 dark:text-slate-300 text-gray-500 font-normal mb-2' data-aos="fade-up" data-aos-delay="200">
+            <p className='mt-2 dark:text-slate-300 text-gray-500 font-normal mb-2 lg:text-justify' data-aos="fade-up" data-aos-delay="200">
               {t('hero_description')} 
             </p>
 
             {/* Newsletter Signup Section */}
             <div className='mt-8 font-inter'>
-              <h3 className='text-xl font-medium dark:text-slate-50 text-light-text' data-aos="fade-up" data-aos-delay="700">
+              <h3 className='text-sm font-medium dark:text-slate-50 text-gray-500' data-aos="fade-up" data-aos-delay="700">
                 {t('newsletter')}
               </h3>
              
-              <form className='mt-4 font-inter'>
+              <form className='mt-2 font-inter'>
                 <input 
                   type="email" 
                   placeholder={t('email_placeholder')} 
-                  className='border rounded py-2 px-4 text-gray-700 bg-transparent outline-none dark:bg-[#1B1B1A] dark:text-slate-300 dark:border-gray-700'
+                  className='border rounded py-2 px-4 text-gray-700 bg-transparent outline-none dark:bg-[#1B1B1A] dark:text-slate-300 dark:border-gray-700 border-l-0 border-r-0 border-t-0 border-b-2 border-[#FF5722] border-solid'
                   required
                 />
                 <button 
                   type="submit" 
-                  className='bg-[#FF5722] text-white rounded py-2 px-4 ml-2 transition-transform duration-300 hover:translate-y-[-2px]'
+                  className='bg-[#FF5722] text-white rounded py-2 px-4  transition-transform duration-300 hover:translate-y-[-2px] border-l-0 border-r-0 border-t-0 border-b-2 border-[#FF5722] border-solid dark:text-slate-300 dark:bg-[#1B1B1A] dark:border-gray-700'
                 >
                   {t('subscribe')}
                 </button>
