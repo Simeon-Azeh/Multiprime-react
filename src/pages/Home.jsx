@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import Tabs from '../components/Tabs'
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
         <Hero />
       </div>
       <div>
-        <Hero />
+        <Tabs />
       </div>
     </div>
   )
