@@ -66,7 +66,7 @@ function Hero() {
                 </button>
               </form>
             </div>
-            <div className='flex items-center gap-4 mt-4'>
+            <div className='flex items-center gap-4 mt-4 justify-center lg:justify-start '>
               <Link to='/about' className='inline-flex items-center mt-8 text-white bg-[#FF5722] dark:bg-[#1B1B1A] py-2 px-4 rounded transition-transform duration-300 hover:translate-y-[-2px] dark:text-slate-300 font-inter border border-[#FF5722] dark:border-gray-700 '>
                 {t('learn_more')} <IoMdArrowForward className='ml-2' />
               </Link>
