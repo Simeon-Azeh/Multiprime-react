@@ -55,16 +55,24 @@ function Hero() {
                 <input 
                   type="email" 
                   placeholder={t('email_placeholder')} 
-                  className='border rounded py-2 px-4 text-gray-700 bg-transparent outline-none dark:bg-[#1B1B1A] dark:text-slate-300 dark:border-gray-700 border-l-0 border-r-0 border-t-0 border-b-2 border-[#FF5722] border-solid'
+                  className='border rounded py-2 px-4 text-gray-700 bg-transparent outline-none dark:bg-[#1B1B1A] dark:text-slate-300 dark:border-gray-700 border-l-0 border-r-0 border-t-0 border-b-2 border-[#FF5722] border-solid rounded-br-none rounded-tl-none'
                   required
                 />
                 <button 
                   type="submit" 
-                  className='bg-[#FF5722] text-white rounded py-2 px-4  transition-transform duration-300 hover:translate-y-[-2px] border-l-0 border-r-0 border-t-0 border-b-2 border-[#FF5722] border-solid dark:text-slate-300 dark:bg-[#1B1B1A] dark:border-gray-700'
+                  className='bg-[#FF5722] text-white rounded py-2 px-4  transition-transform duration-300 hover:translate-y-[-2px] border-b-2 border-[#FF5722]     dark:text-slate-300 dark:bg-[#1B1B1A] dark:border-gray-700 rounded-bl-none rounded-tr-none'
                 >
                   {t('subscribe')}
                 </button>
               </form>
+            </div>
+            <div className='flex items-center gap-4 mt-4'>
+              <Link to='/about' className='inline-flex items-center mt-8 text-white bg-[#FF5722] dark:bg-[#1B1B1A] py-2 px-4 rounded transition-transform duration-300 hover:translate-y-[-2px] dark:text-slate-300 font-inter border border-[#FF5722] dark:border-gray-700 '>
+                {t('learn_more')} <IoMdArrowForward className='ml-2' />
+              </Link>
+              <Link to='/register' className='inline-flex items-center mt-8 text-[#FF5722] dark:text-slate-300 font-inter border rounded py-2 px-4 font-medium border-[#FF5722] border-solid dark:border-gray-700'>
+                {t('contact_sales')} <IoMdArrowForward className='ml-2' />
+              </Link>
             </div>
           </div>
           <div className='mt-8 md:mt-0 md:w-1/2 flex justify-center'>

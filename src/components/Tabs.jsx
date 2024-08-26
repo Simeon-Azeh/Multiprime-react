@@ -30,89 +30,59 @@ const projects = {
     },
 
   ],
-  Tracks: [
+  Beats: [
     {
-        title: 'Sidec',
-        image: '/images/work5.png',
-        description: 'Sidec is a platform that allows users to find questions, book tutors, and take practice exams. In summary, Sidec is a web app that allows students to practice and know how prepared they are for a National Exam. I am pleased to have worked on the front-end',
-        description2: 'As the frontend developer of Sidec, I bring to life a vision that goes beyond pixels and code. Our platform is a dynamic canvas where education meets innovation. From personalized mock exams to real-time syllabus courses, every click is a step toward empowering students across Africa.',
-        category: 'EdTech',
-        client: 'Sidec Inc.',
-        projectDate: '2023 to Present',
-        projectUrl: 'https://sidecedu.com',
+        title: 'Trickstar',
+        image: '/images/trickstar.png',
+        description: 'Trickstar" blends old-school beats with modern production, featuring hard-hitting drums, catchy bass, and intricate urban melodies.',
+        description2: 'Hip Hop',
+      
       },
       {
-        title: 'Afiacare',
-        image: '/images/work.png',
-        description: 'Afiacare is dedicated to transforming the healthcare system in Cameroon. Our comprehensive digital platform addresses key challenges such as data mismanagement, donor matching, and information sharing between hospitals. We leverage cutting-edge technology to enhance the accuracy, efficiency, and accessibility of healthcare services.',
-        description2: "I worked on the frontend of this platform!",
-        category: 'Healthcare',
-        client: 'The Afiacare team',
-        projectDate: '2024 to Present',
-        projectUrl: 'https://afiacare.netlify.app',
+        title: 'Hard drill',
+        image: '/images/hard_drille.png',
+        description: '"Hard Drill" features deep 808s, sharp hi-hats, punchy snares, and dark melodies, creating intense, gritty drill energy.',
+        description2: "Drill",
+    
       },
       {
-        title: 'Smartpro',
-        image: '/images/work3.png',
-        description: 'This is a smart waste management software, it was just for a school project, but I am looking forward to realizing it.',
-        category: 'Web Development',
-        client: 'School Project',
-        projectDate: '2024 to Present',
-        projectUrl: 'https://example.com/project5',
+        title: 'Time no dey',
+        image: '/images/time_no_dey.png',
+        description: '"TND" combines Afrobeat rhythms with Amapiano grooves, featuring rolling basslines, syncopated percussion, and lush, airy keys.',
+        description2: "Afrobeat",
       },
   
     // Add more projects here
   ],
-  Beats: [
+  Tracks: [
     {
-        title: 'Multiprime',
-        image: '/images/work2.png',
-        description: 'Multiprime is an entertainment website that deals with promotion of music, model and arts talents.',
-        description2: 'I work as Snr Frontend developer at this company, as well as their content writer',
-        category: 'Entertainment',
-        client: 'Client A',
-        projectDate: '2024 to Present',
-        projectUrl: 'https://multiprime.org',
-      },
-      {
-        title: 'Urega',
-        image: '/images/work6.png',
-        description: 'Founded in 2020, the Urega Foundation is a pan-African youth-led NGO founded in the Netherlands with an official branch in Cameroon. Urega was founded to support High school students in Cameroon with full scholarships',
-        description2: "I have a double role at Urega where I currently work as Urega's brand manager, I design and ideate their post across social media. I have also worked on the front-end of the website and designing their application process for a seamless application process for aspiring scholars.",
-        category: 'Education',
-        client: 'The Urega Foundation',
-        projectDate: '2022 to Present',
-        projectUrl: 'https://urega.org',
-      },
-      {
-        title: 'CodeXtreme',
-        image: '/images/work1.png',
-        description: 'CodeXtreme is a seasonal 4 days Hackathon that brings together like-minded individuals from all walks of tech to solve problems, network with local and international tech experts and companies, win prizes, and change lives with their tech solutions.',
-        category: 'Events and Student development',
-        client: 'Codextreme | Nigma',
-        projectDate: '2024 to Present',
-        projectUrl: 'https://codextremeex.netlify.app/',
-      },
+      title: 'Time no dey',
+      image: '/images/time_no_dey.png',
+      description: '"TND" combines Afrobeat rhythms with Amapiano grooves, featuring rolling basslines, syncopated percussion, and lush, airy keys.',
+      description2: "Afrobeat",
+    },
+    
+    
   ],
   Shop: [
     {
       title: 'Photo 1',
-      image: '/images/about1.jpg',
+      image: '/images/_DSC5299.jpg',
       description: 'Description 1',
     },
     {
       title: 'Photo 2',
-      image: '/images/about2.jpg',
+      image: '/images/m2N.jpg',
       description: 'Description 1',
     },
     {
       title: 'Photo 3',
-      image: '/images/about3.jpg',
+      image: '/images/mp2.jpg',
       description: 'Description 1',
     },
     {
       title: 'Photo 4',
-      image: '/images/about4.jpg',
+      image: '/images/shop.jpg',
       description: 'Description 1',
       category: 'Photography',
       client: 'Client D',
@@ -121,76 +91,14 @@ const projects = {
     },
     {
       title: 'Photo 5',
-      image: '/images/about7.jpg',
+      image: '/images/shop1.jpg',
       description: 'Description 1',
       category: 'Photography',
       client: 'Client D',
       projectDate: '2023-04-01',
       projectUrl: 'https://example.com/photo1',
     },
-    {
-      title: 'Photo 6',
-      image: '/images/about8.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
-    {
-      title: 'Photo 7',
-      image: '/images/about9.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
-    {
-      title: 'Photo 8',
-      image: '/images/about10.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
-    {
-      title: 'Photo 9',
-      image: '/images/about11.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
-    {
-      title: 'Photo 10',
-      image: '/images/about12.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
-    {
-      title: 'Photo 11',
-      image: '/images/about13.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
-    {
-      title: 'Photo 12',
-      image: '/images/about15.jpg',
-      description: 'Description 1',
-      category: 'Photography',
-      client: 'Client D',
-      projectDate: '2023-04-01',
-      projectUrl: 'https://example.com/photo1',
-    },
+  
     // Add more projects here
   ],
 };
@@ -261,7 +169,7 @@ const Tabs = () => {
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-48 object-cover rounded-md cursor-pointer hover:scale-105 duration-300"
+                            className="w-full h-48 object-cover rounded-md cursor-pointer object-top hover:scale-105 duration-300"
                           />
                         </div>
                         <div className="p-4">
@@ -308,7 +216,7 @@ const Tabs = () => {
                     <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="w-full h-96  rounded-lg object-cover"
+                    className="w-full h-96  rounded-lg object-cover object-top cursor-pointer hover:scale-105 duration-300"
                   />
                     </div>
               
@@ -318,8 +226,8 @@ const Tabs = () => {
               <div>
                 <h2 className='text-lg font-semibold mt-5 mb-2 text-light-text'>About</h2>
                 <p className="text-justify mb-2 font-medium">{selectedProject.description}</p>
-                <p className="text-justify">{selectedProject.description2}</p>
-                <a href="http://" target="_blank" rel="noopener noreferrer" className='text-[#414760]'>Discover</a>
+                <p className="text-justify mb-4">{selectedProject.description2}</p>
+                <a href="http://" target="_blank" rel="noopener noreferrer" className='text-[#414760] border mt-4 font-medium py-2 px-4 border-gray-700 border-solid rounded'>Discover</a>
               </div>
             </div>
           )}
