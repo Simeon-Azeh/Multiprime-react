@@ -36,6 +36,28 @@
   "membership_advantage_4": "Opportunities to network with industry professionals.",
   "membership_advantage_5": "Personalized support and career guidance.",
   "membership_image_alt": "Membership Advantages",
-  "membership_join_button": "Join Membership"
+  "membership_join_button": "Join Membership",
+
+  "pricing_web_dev_title": "Music Production",
+  "pricing_flat_rate": "Flat Rate",
+  "pricing_web_dev_price": "XAF 20,000/mo",
+  "pricing_web_dev_desc": "Music production services including recording, mixing, and mastering.",
+  "pricing_feature_custom_design": "Recording",
+  "pricing_feature_responsive": "Mixing",
+  "pricing_feature_seo": "Mastering",
+  "pricing_feature_fast_load": "Original Compositions",
+  "pricing_button_share_vision": "Explore Package",
+  "pricing_product_design_title": "Modeling extra",
+  "pricing_subscription": "Subscription",
+  "pricing_product_design_price": "XAF 80,000/yr",
+  "pricing_product_design_desc": "Exclusive modeling services with professional coaching and portfolio development.",
+  "pricing_feature_ux_ui": "Pose Guidance",
+  "pricing_feature_prototype": "Personal Coaching",
+  "pricing_feature_user_testing": "Regular Photo Shoots",
+  "pricing_feature_iteration": "Portfolio Development",
+  "pricing_button_work_together": "Let's Work Together",
+  "pricing_custom_title": "Custom",
+  "pricing_custom_desc": "Have unique requirements? Let's discuss a custom solution tailored to your needs.",
+  "pricing_custom_button": "Let's talk"
    
 }

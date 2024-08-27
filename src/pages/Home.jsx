@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Tabs from '../components/Tabs'
 import Services from '../components/Services'
 import Membership from '../components/Membership'
+import Pricing from '../components/Pricing'
 
 function Home() {
   return (
@@ -22,6 +23,9 @@ function Home() {
       </div>
       <div>
         <Membership />
+      </div>
+      <div>
+        <Pricing />
       </div>
     </div>
   )
