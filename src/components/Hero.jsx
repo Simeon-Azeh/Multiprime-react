@@ -38,7 +38,7 @@ function Hero() {
         <div className='flex flex-col md:flex-row items-center justify-center '>
           <div className='w-full md:w-1/2 text-center md:text-left'>
           
-            <h2 className='relative overflow-hidden inline-block text-2xl lg:text-5xl font-medium dark:text-slate-50 text-[#37474F] font-inter  ' data-aos="fade-up" data-aos-delay="400">
+            <h2 className='relative overflow-hidden inline-block text-2xl lg:text-5xl font-semibold lg:font-medium dark:text-slate-50 text-[#37474F] font-inter  ' data-aos="fade-up" data-aos-delay="400">
               {t('nothing_beats')} <span className='dark:text-slate-300 text-[#FF5722]'>{t('prime')}</span> {t('entertainment')} <span className='dark:text-slate-300 text-[#FF5722]'>{t('like_prime')}</span>
             </h2>
             <p className='mt-2 dark:text-slate-300 text-gray-500 font-normal mb-2 lg:text-justify' data-aos="fade-up" data-aos-delay="200">

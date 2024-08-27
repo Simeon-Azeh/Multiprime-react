@@ -27,6 +27,15 @@
     "services_modeling": "Modeling",
     "services_music": "Music Production",
     "services_skits": "Comedy Skits",
-    "services_dance": "Dance Performances"
+    "services_dance": "Dance Performances",
+
+    "membership_title": "Advantages of Membership with Multiprime",
+  "membership_advantage_1": "Exclusive access to premium content.",
+  "membership_advantage_2": "Priority booking for events and performances.",
+  "membership_advantage_3": "Discounts on services like photography and music production.",
+  "membership_advantage_4": "Opportunities to network with industry professionals.",
+  "membership_advantage_5": "Personalized support and career guidance.",
+  "membership_image_alt": "Membership Advantages",
+  "membership_join_button": "Join Membership"
    
 }

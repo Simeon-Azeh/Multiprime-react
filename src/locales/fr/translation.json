@@ -22,7 +22,7 @@
     "learn_more": "En savoir plus",
     "contact_sales": "Contactez les ventes",
 
-    
+
     "services_title": "Nos Services",
     "services_intro": "Dans le monde du divertissement, certaines expériences résonnent — vous ne savez pas toujours pourquoi, mais vous le ressentez!",
     "services_description": "Chez Multiprime, nous nous engageons à offrir cette sensation à travers une large gamme de services de divertissement.",
@@ -30,5 +30,14 @@
     "services_modeling": "Modélisation",
     "services_music": "Production Musicale",
     "services_skits": "Sketchs Comiques",
-    "services_dance": "Performances de Danse"
+    "services_dance": "Performances de Danse",
+
+    "membership_title": "Avantages de l'adhésion avec Multiprime",
+  "membership_advantage_1": "Accès exclusif à du contenu premium.",
+  "membership_advantage_2": "Réservation prioritaire pour les événements et performances.",
+  "membership_advantage_3": "Réductions sur des services tels que la photographie et la production musicale.",
+  "membership_advantage_4": "Opportunités de réseauter avec des professionnels du secteur.",
+  "membership_advantage_5": "Support personnalisé et conseils pour votre carrière.",
+  "membership_image_alt": "Avantages de l'adhésion",
+  "membership_join_button": "Rejoindre l'adhésion"
 }
