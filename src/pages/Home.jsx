@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Tabs from '../components/Tabs'
+import Services from '../components/Services'
 
 function Home() {
   return (
@@ -14,6 +15,9 @@ function Home() {
       </div>
       <div>
         <Tabs />
+      </div>
+      <div>
+        <Services />
       </div>
     </div>
   )

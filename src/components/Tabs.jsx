@@ -6,6 +6,16 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const projects = {
+  Blogs: [
+    {
+      title: ' Kelly Shines in Stunning New Photo Shoot',
+      image: '/images/kellyblog.jpg',
+      description: "At Multiprime, we take immense pride in showcasing not just the talent of our models but also the dynamic essence of our brand. Today, we’re thrilled to spotlight Kelly, a model who has been an integral part of our team for the past three years. Her latest photo shoot, captured by the talented Light Man Pictures, is a testament to both her exceptional beauty and our brand's commitment to excellence.",
+      description2: "In this striking series of images, Kelly exudes confidence and grace in a stunning bikini, highlighting her remarkable physique and radiant dark skin. This photo is not only a celebration of Kelly’s individuality but also a showcase of the diverse beauty that our brand champions.",
+    },
+    
+    
+  ],
   Profiles: [
     {
       title: 'Z Prime',
@@ -29,7 +39,7 @@ const projects = {
       description2: "No info yet!",
     },
   ],
-  Beats: [
+  Releases: [
     {
         title: 'Trickstar',
         image: '/images/trickstar.png',
@@ -53,16 +63,7 @@ const projects = {
   
     // Add more projects here
   ],
-  Tracks: [
-    {
-      title: 'Time no dey',
-      image: '/images/time_no_dey.png',
-      description: '"TND" combines Afrobeat rhythms with Amapiano grooves, featuring rolling basslines, syncopated percussion, and lush, airy keys.',
-      description2: "Afrobeat",
-    },
-    
-    
-  ],
+
   Shop: [
     {
       title: 'Photo 1',

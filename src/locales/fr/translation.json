@@ -21,5 +21,14 @@
 
     "learn_more": "En savoir plus",
     "contact_sales": "Contactez les ventes",
-    "description_zama": "Zama Protus, alias Z_Prime, PDG de Multi_Prime Entertainment, est né le 16 avril 1996 au Cameroun. Dès son plus jeune âge, Zama a manifesté une profonde passion pour le divertissement, s'inspirant de ses racines culturelles et de la scène artistique dynamique de sa communauté."
+
+    
+    "services_title": "Nos Services",
+    "services_intro": "Dans le monde du divertissement, certaines expériences résonnent — vous ne savez pas toujours pourquoi, mais vous le ressentez!",
+    "services_description": "Chez Multiprime, nous nous engageons à offrir cette sensation à travers une large gamme de services de divertissement.",
+    "services_photography": "Photographie",
+    "services_modeling": "Modélisation",
+    "services_music": "Production Musicale",
+    "services_skits": "Sketchs Comiques",
+    "services_dance": "Performances de Danse"
 }
