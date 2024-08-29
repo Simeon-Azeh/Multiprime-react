@@ -3,6 +3,7 @@ import { FaLaptopCode, FaPaintBrush } from 'react-icons/fa';
 import { BsCheck } from 'react-icons/bs';
 import { CgBrowser } from "react-icons/cg";
 import { VscLightbulbSparkle } from "react-icons/vsc";
+import { TbMusicBolt } from "react-icons/tb";
 import { TbRainbow } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
@@ -50,7 +51,7 @@ function Pricing() {
       <div className="w-full md:w-4/5 mx-auto">
         <div className="flex flex-wrap justify-center">
           <PricingCard
-            icon={CgBrowser}
+            icon={TbMusicBolt}
             title={t('pricing_web_dev_title')}
             pricingType={t('pricing_flat_rate')}
             price={t('pricing_web_dev_price')}
@@ -78,7 +79,7 @@ function Pricing() {
             buttonLabel={t('pricing_button_work_together')}
           />
         </div>
-        <div className="flex items-center justify-between flex-col md:flex-row bg-light-body dark:bg-[#1B1B1A] px-6 py-6 rounded-lg w-full mt-6 border dark:border-gray-800 dark:border-solid font-inter" data-aos="fade-up">
+        <div className="flex items-center justify-between flex-col md:flex-row bg-light-body dark:bg-[#1B1B1A] px-6 py-6 rounded-lg w-full mt-6 border dark:border-gray-800 dark:border-solid font-inter" >
           <div className='flex gap-2 items-center'>
             <div>
               <div className='flex items-center gap-2'>

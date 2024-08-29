@@ -58,6 +58,28 @@
   "pricing_button_work_together": "Let's Work Together",
   "pricing_custom_title": "Custom",
   "pricing_custom_desc": "Have unique requirements? Let's discuss a custom solution tailored to your needs.",
-  "pricing_custom_button": "Let's talk"
+  "pricing_custom_button": "Let's talk",
+
+
+  "testimonial_1_quote": "Multiprime offers the best entertainment services. Their photography and music production are top-notch!",
+  "testimonial_1_author": "- Meschach, Musician",
+  "testimonial_2_quote": "I love working with Multiprime! Their modeling services have taken my career to the next level.",
+  "testimonial_2_author": "- Kelly, Model",
+  "testimonial_3_quote": "The skits and dance performances at Multiprime events are always a highlight. Highly recommended!",
+  "testimonial_3_author": "- Mel V., Dancer",
+  "testimonial_4_quote": "Multiprime's branding and video production services helped me create a strong brand presence.",
+  "testimonial_4_author": "- Michael Nfor, Entrepreneur",
+
+  "quickLinks": "Quick Links",
+  "home": "Home",
+  "videos": "Videos",
+  "models": "Models",
+  "help": "Help",
+  "faqs": "FAQs",
+  "terms": "Terms & Conditions",
+  "privacy": "Privacy Policy",
+  "subscriptions": "Subscriptions",
+  "followUs": "Follow Us",
+  "allRightsReserved": "All rights reserved."
    
 }
