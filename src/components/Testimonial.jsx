@@ -6,7 +6,7 @@ const Testimonial = () => {
   const { t } = useTranslation();
 
   return (
-    <Carousel autoplay className="w-4/5 mx-auto bg-[#FF5722] dark:bg-dark-body font-inter rounded">
+    <Carousel autoplay className="lg:w-4/5 mx-auto  bg-[#FF5722] dark:bg-dark-body font-inter rounded">
       <div>
         <div className="h-40 flex items-center justify-center text-white text-center leading-[10rem] bg-light-primary dark:bg-dark-primary">
           <div className="p-4">

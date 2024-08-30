@@ -7,6 +7,7 @@ import Membership from '../components/Membership'
 import Pricing from '../components/Pricing'
 import Testimonial from '../components/Testimonial'
 import Footer from '../components/footer'
+import SectionMarquee from '../components/SectionMarquee'
 
 function Home() {
   return (
@@ -26,7 +27,10 @@ function Home() {
       <div>
         <Membership />
       </div>
-      <div className='bg-light-body dark:bg-dark-body'>
+      <div>
+        <SectionMarquee />
+      </div>
+      <div className='bg-light-body dark:bg-dark-body px-4 lg:px-0'>
         <Testimonial />
       </div>
       <div>
