@@ -46,7 +46,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full mt-8 text-center border-t border-gray-300 border-solid dark:border-gray-700 pt-4 flex gap-2 items-center justify-center">
+      <div className="w-full mt-8 text-center border-t border-gray-300 border-solid dark:border-gray-700 pt-4 flex flex-col lg:flex-row gap-2 items-center justify-center">
         <p className="text-sm">&copy; 2024 Multiprime. {t('allRightsReserved')}</p>
         <p className="text-sm">{t('termsAndConditions')}</p>
         <p className="text-sm">{t('privacyPolicy')}</p>
