@@ -8,10 +8,15 @@ import Pricing from '../components/Pricing'
 import Testimonial from '../components/Testimonial'
 import Footer from '../components/footer'
 import SectionMarquee from '../components/SectionMarquee'
+import Subsection from '../components/Subsection'
+import BrandScroll from '../components/BrandScroll'
+import Drift from 'react-driftjs'
+
 
 function Home() {
   return (
     <div>
+       <Drift appId="m7v62erik89n" />
       <div className='sticky top-0  z-50 '>
         <Header />
       </div>

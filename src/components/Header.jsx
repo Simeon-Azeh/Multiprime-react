@@ -111,7 +111,7 @@ function Header() {
                 <Link to="/resume">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('discover')}</span>
                 </Link>
-                <Link to="/portfolio">
+                <Link to="/releases">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('releases')}</span>
                 </Link>
                 <Link to="/portfolio">
@@ -209,7 +209,7 @@ function Header() {
               <Link to="/resume">
                 <span className="block py-2 px-4 text-[#414760] hover:text-[#FF5722]">{t('discover')}</span>
               </Link>
-              <Link to="/portfolio">
+              <Link to="/releases">
                 <span className="block py-2 px-4 text-[#414760] hover:text-[#FF5722]">{t('releases')}</span>
               </Link>
               <Link to="/portfolio">

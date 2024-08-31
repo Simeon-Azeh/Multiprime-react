@@ -146,3 +146,25 @@
   }
 }
   
+/* In your global CSS file if needed */
+.normal-section {
+  min-height: 500px;
+}.parallax {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px; /* Adjust height as needed */
+}
+
+@keyframes marqueebrand {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marqueebrand {
+  animation: marquee 15s linear infinite;
+}
