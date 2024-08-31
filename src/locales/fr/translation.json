@@ -83,5 +83,13 @@
   "privacy": "Politique de confidentialité",
   "subscriptions": "Abonnements",
   "followUs": "Suivez-nous",
-  "allRightsReserved": "Tous droits réservés."
+  "merch": "Merch",
+  "pricing": "Prix",
+  "support": "Support",
+  "helpdesk": "Bureau d'aide",
+  "allRightsReserved": "Tous droits réservés.",
+
+  "about_prime": "Oui, ce baton a été fait par Multiprime.",
+  "about_description": "Centaines d'artiste ont trouvés leur carré parfait avec Multiprime.",
+  "about_btn": "Votre prochain baton est en cours"
 }

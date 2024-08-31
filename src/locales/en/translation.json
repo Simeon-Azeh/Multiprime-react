@@ -80,10 +80,19 @@
   "privacy": "Privacy Policy",
   "subscriptions": "Subscriptions",
   "followUs": "Follow Us",
-  "allRightsReserved": "All rights reserved.",
+  "merch": "Merch",
+  "pricing": "Pricing",
+  "support": "Support",
+  "helpdesk": "Help desk",
+  "allRightsReserved": "All rights reserved",
 
   "about_prime": "Yes, that beat was made by Multiprime.",
   "about_description": "Hundreds of artist have found their perfect beat with Multiprime.",
-  "about_btn": "Your next hit is waiting"
+  "about_btn": "Your next hit is waiting",
+  "termsAndConditions": "Terms & Conditions",
+  "privacyPolicy": "Privacy Policy",
+  "refundPolicy": "Refund Policy",
+  "disclaimer": "Disclaimer",
+  "copyright": "copyright"
    
 }
