@@ -75,9 +75,10 @@ function Hero() {
               </Link>
             </div>
           </div>
-          <div className='mt-8 md:mt-0 md:w-1/2 flex justify-center'>
-            <img src={HeroImg} alt="hero-img" className='w-3/4 md:w-full mx-auto' data-aos="fade-up" data-aos-delay="800" />
-          </div>
+          <div className='mt-8 md:mt-0 md:w-1/2 flex-grow flex justify-center items-center min-h-[300px]'>
+  <img src={HeroImg} alt="hero-img" className='max-w-full h-auto mx-auto object-cover' data-aos="fade-up" data-aos-delay="800" />
+</div>
+
         </div>
       </div>
     </div>

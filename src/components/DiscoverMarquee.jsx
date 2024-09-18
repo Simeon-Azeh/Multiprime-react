@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { IoIosArrowForward } from "react-icons/io";
+import { FaSearch } from 'react-icons/fa';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +16,7 @@ const images = [
   '/images/about6.jpg'
 ];
 
-function SectionMarquee() {
+function DiscoverMarquee() {
   const { t } = useTranslation();
   const duplicatedImages = [...images, ...images]; // Duplicate images for seamless scrolling
 
@@ -33,7 +35,7 @@ function SectionMarquee() {
   }, []);
 
   return (
-    <div className="bg-white dot-pattern dark:bg-dark-body transition-colors py-10 px-4 md:px-0 overflow-hidden ">
+    <div className="bg-white dot-pattern dark:bg-dark-body transition-colors py-10 px-4 md:px-0 overflow-hidden pt-40">
       <div className="w-full md:w-4/5 mx-auto flex flex-col md:flex-row items-center">
         <div className="relative w-full md:w-1/2 flex flex-col items-center h-96 overflow-hidden" data-aos="fade-right">
           <div className="marquee-container">
@@ -56,17 +58,30 @@ function SectionMarquee() {
           </div>
         </div>
         <div className="w-full md:w-4/5 mt-6 md:mt-0 md:ml-8 font-inter px-1 md:px-0" data-aos="fade-left">
-          <h2 className="text-2xl md:text-6xl font-medium mb-2 text-[#FF5722] dark:text-gray-200">{t('about_prime')}</h2>
+          <h2 className="text-2xl md:text-6xl font-medium mb-2 text-[#FF5722] dark:text-gray-200">{t('discover_prime')}</h2>
           <p className="mt-4 text-light-text dark:text-slate-300 text-justify">
-            {t('about_description')}
+            {t('discover_description')}
           </p>
-          <button className='mt-4 px-4 py-3 bg-[#FF5722] text-white rounded dark:bg-[#141414] dark:border dark:border-gray-700 flex items-center gap-1 hover:translate-y-[-3px] duration-300'>{t('about_btn')}<IoIosArrowForward /></button>
+          
+          {/* Search Input */}
+          <div className="mt-8 flex justify-center md:justify-start">
+          <FaSearch className="text-gray-500 dark:text-slate-300 mr-2 absolute bottom-3 left-0" />
+            <input 
+              type="text" 
+              placeholder={t('search_placeholder')} 
+              className="border-b-2 border-[#FF5722] bg-transparent text-gray-700 py-2 px-4 w-full md:w-2/3 focus:outline-none dark:bg-dark-body dark:text-slate-300 ml-2"
+            />
+           <button 
+                  type="submit" 
+                  className='bg-[#FF5722] text-white rounded py-2 px-4  transition-transform duration-300 hover:translate-y-[-2px] border-b-2 border-[#FF5722]     dark:text-slate-300 dark:bg-[#1B1B1A] dark:border-gray-700 rounded-bl-none rounded-tr-none'
+                >
+                  {t('search')}
+                </button>
+          </div>
         </div>
-      
       </div>
-     
     </div>
   );
 }
 
-export default SectionMarquee;
+export default DiscoverMarquee;

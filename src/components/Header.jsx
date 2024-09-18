@@ -108,7 +108,7 @@ function Header() {
             </button>
             {musicDropdownOpen && (
               <div className="absolute dark:bg-[#1a1818] dark:text-white py-2 mt-2 space-y-2 rounded border bg-white text-[#414760] dark:border-gray-600 dark:border-solid">
-                <Link to="/resume">
+                <Link to="/music/discover">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('discover')}</span>
                 </Link>
                 <Link to="/releases">
