@@ -7,18 +7,15 @@ import Membership from '../../components/Membership'
 import Pricing from '../../components/Pricing'
 import Testimonial from '../../components/Testimonial'
 import Footer from '../../components/footer'
-import SectionMarquee from '../../components/SectionMarquee'
-import Subsection from '../../components/Subsection'
-import BrandScroll from '../../components/BrandScroll'
-import Drift from 'react-driftjs'
+
 import DiscoverMarquee from '../../components/DiscoverMarquee'
 
 
 function Discover() {
   return (
     <div>
-       <Drift appId="m7v62erik89n" />
-      <div className='sticky top-0  z-50 '>
+     
+      <div className='sticky top-0 z-50 '>
         <Header/>
       </div>
     
@@ -30,7 +27,7 @@ function Discover() {
         <Membership />
       </div>
       
-      <div className='bg-light-body dark:bg-dark-body px-4 lg:px-0'>
+      <div className='px-4 bg-light-body dark:bg-dark-body lg:px-0'>
         <Testimonial />
       </div>
       <div>
