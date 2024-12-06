@@ -11,19 +11,22 @@ import SectionMarquee from '../components/SectionMarquee'
 import Subsection from '../components/Subsection'
 import BrandScroll from '../components/BrandScroll'
 import Drift from 'react-driftjs'
+import Banner from '../components/Banner'
 
 
 function Home() {
   return (
     <div>
        <Drift appId="m7v62erik89n" />
-      <div className='sticky top-0  z-50 '>
+       <Banner />
+      <div className='sticky top-0 z-50 mt-20 md:mt-12'>
+    
         <Header />
       </div>
       <div>
         <Hero />
       </div>
-      <div>
+      <div >
         <Tabs />
       </div>
       <div>
@@ -35,7 +38,7 @@ function Home() {
       <div>
         <SectionMarquee />
       </div>
-      <div className='bg-light-body dark:bg-dark-body px-4 lg:px-0'>
+      <div className='px-4 bg-light-body dark:bg-dark-body lg:px-0'>
         <Testimonial />
       </div>
       <div>

@@ -88,8 +88,8 @@ function Header() {
   };
 
   return (
-    <div style={{ backgroundColor: headerBackground }} className="fixed w-full z-50 transition-colors">
-      <div className='flex justify-between w-full lg:w-4/5 mx-auto items-center py-4 px-6 md:px-0 font-inter sticky top-0 z-50'>
+    <div style={{ backgroundColor: headerBackground }} className="fixed z-50 w-full transition-colors ">
+      <div className='sticky top-0 z-50 flex items-center justify-between w-full px-6 py-4 mx-auto lg:w-4/5 md:px-0 font-inter'>
         <div className="text-lg font-semibold">
           <Link to="/">
             <h1 className='font-inter text-[#] dark:text-slate-50 text-light-text'>
@@ -97,7 +97,7 @@ function Header() {
             </h1>
           </Link>
         </div>
-        <div className="hidden md:flex space-x-6 text-light-text dark:text-slate-50 font-medium font-Inter">
+        <div className="hidden space-x-6 font-medium md:flex text-light-text dark:text-slate-50 font-Inter">
           <Link to="/">
             <span className="hover:border-b-2 border-[#FF5722] dark:border-gray-400 dark:border-solid">{t('feed')}</span>
           </Link>
@@ -149,7 +149,7 @@ function Header() {
             <span className="hover:border-b-2 border-[#FF5722] dark:border-gray-400 dark:border-solid">{t('contact')}</span>
           </Link>
         </div>
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="items-center hidden space-x-4 md:flex">
           <button onClick={toggleDarkMode} className="hover:text-gray-400 dark:text-slate-50 text-[#414760]">
             {darkMode ? <MdOutlineLightMode size={24} /> : <MdOutlineDarkMode size={24} />}
           </button>
@@ -174,7 +174,7 @@ function Header() {
             <FaWhatsapp size={20} />
           </a>
         </div>
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="flex items-center space-x-4 md:hidden">
           <button onClick={toggleDarkMode} className="hover:text-gray-400 dark:text-slate-50 text-[#414760]">
             {darkMode ? <MdOutlineLightMode size={24} /> : <MdOutlineDarkMode size={24} />}
           </button>
@@ -246,7 +246,7 @@ function Header() {
         <Link to="/contact">
           <span className="block py-2 px-4 text-[#414760] hover:text-[#2c2b2b]">{t('contact')}</span>
         </Link>
-        <div className="flex space-x-4 px-4 mt-4">
+        <div className="flex px-4 mt-4 space-x-4">
           <a href="https://www.facebook.com/kongnyuy.simeon.3?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-[#414760] hover:text-[#2c2b2b]">
             <FaFacebook size={20} />
           </a>

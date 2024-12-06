@@ -133,8 +133,8 @@ const Tabs = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-dark-body transition-colors py-10 px-4 md:px-0 font-inter">
-      <div className="w-full md:w-4/5 mx-auto">
+    <div className="px-4 py-10 transition-colors bg-white pt-28 md:pt-0 dark:bg-dark-body md:px-0 font-inter">
+      <div className="w-full mx-auto md:w-4/5">
         <Tab.Group>
           <Tab.List className="flex space-x-1 bg-white border dark:border-none rounded-lg dark:bg-[#1B1B1A] p-1">
             {Object.keys(projects).map((category) => (
@@ -153,7 +153,7 @@ const Tabs = () => {
             {Object.entries(projects).map(([category, projectList], idx) => (
               <Tab.Panel
                 key={idx}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+                className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
               >
                 {projectList
                   .slice(0, showMore ? projectList.length : 4)
@@ -174,13 +174,13 @@ const Tabs = () => {
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="w-12 h-12 ml-4 mt-4 object-cover rounded-full object-top"
+                            className="object-cover object-top w-12 h-12 mt-4 ml-4 rounded-full"
                           />
-                          <div className="py-2 px-6 md:px-2 md:py-2">
+                          <div className="px-6 py-2 md:px-2 md:py-2">
                             <h3 className="text-lg font-medium text-light-text dark:text-white">{project.title}</h3>
                             <p className="text-sm font-medium text-[#FF5722] dark:text-gray-400">{project.role}</p>
-                            <p className="text-light-text dark:text-gray-400 text-xs hidden md:block">{truncateDescription(project.description, 20)}</p>
-                            <p className="text-light-text dark:text-gray-400 text-sm block md:hidden">{truncateDescription(project.description, 80)}</p>
+                            <p className="hidden text-xs text-light-text dark:text-gray-400 md:block">{truncateDescription(project.description, 20)}</p>
+                            <p className="block text-sm text-light-text dark:text-gray-400 md:hidden">{truncateDescription(project.description, 80)}</p>
                             <button
                               className="flex font-medium text-[13px] items-center mt-2 text-[#FF5722] dark:text-gray-200"
                               onClick={() => openDrawer(project)}
@@ -196,13 +196,13 @@ const Tabs = () => {
                             <img
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-64 object-cover rounded-md cursor-pointer object-top hover:scale-105 duration-300"
+                              className="object-cover object-top w-full h-64 duration-300 rounded-md cursor-pointer hover:scale-105"
                             />
                           </div>
                           <div className="p-4">
                             <h3 className="text-lg font-medium text-light-text dark:text-white">{project.title}</h3>
-                            <p className="text-light-text dark:text-gray-400 text-sm hidden md:block">{truncateDescription(project.description, 28)}</p>
-                            <p className="text-light-text dark:text-gray-400 text-sm block md:hidden">{truncateDescription(project.description, 80)}</p>
+                            <p className="hidden text-sm text-light-text dark:text-gray-400 md:block">{truncateDescription(project.description, 28)}</p>
+                            <p className="block text-sm text-light-text dark:text-gray-400 md:hidden">{truncateDescription(project.description, 80)}</p>
                             <button
                               className="flex font-medium text-[13px] items-center mt-4 text-[#FF5722] dark:text-gray-200"
                               onClick={() => openDrawer(project)}
@@ -239,13 +239,13 @@ const Tabs = () => {
       >
         {selectedProject && (
           <div>
-            <div className='flex flex-col md:flex-row items-center gap-4'>
-              <div className='w-full md:w-1/2 pt-4 '>
+            <div className='flex flex-col items-center gap-4 md:flex-row'>
+              <div className='w-full pt-4 md:w-1/2 '>
                   <div className='w-full h-96'>
                   <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-96  rounded-lg object-cover object-top cursor-pointer hover:scale-105 duration-300"
+                  className="object-cover object-top w-full duration-300 rounded-lg cursor-pointer h-96 hover:scale-105"
                 />
                   </div>
             
@@ -253,9 +253,9 @@ const Tabs = () => {
             
             </div>
             <div>
-              <h2 className='text-lg font-semibold mt-5 mb-2 text-light-text'>About</h2>
-              <p className="text-justify mb-2 font-medium">{selectedProject.description}</p>
-              <p className="text-justify mb-4">{selectedProject.description2}</p>
+              <h2 className='mt-5 mb-2 text-lg font-semibold text-light-text'>About</h2>
+              <p className="mb-2 font-medium text-justify">{selectedProject.description}</p>
+              <p className="mb-4 text-justify">{selectedProject.description2}</p>
               <a href="http://" target="_blank" rel="noopener noreferrer" className='text-[#414760] border mt-4 font-medium py-2 px-4 border-gray-700 border-solid rounded'>Discover</a>
             </div>
           </div>
