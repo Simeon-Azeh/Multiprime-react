@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './routes/i18n'; // Import i18n configuration
 import Home from './pages/Home';
 import Releases from './pages/Releases';
-import Drift from 'react-driftjs';
 import Discover from './pages/Music/Discover';
 function App() {
   
@@ -28,9 +27,7 @@ function ScrollToTop() {
     <BrowserRouter>
    
     <ScrollToTop />
-    
     <Routes>
-      
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
      <Route path="/releases" element={<Releases/>} />
