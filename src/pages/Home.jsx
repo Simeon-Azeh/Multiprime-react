@@ -10,14 +10,14 @@ import Footer from '../components/footer'
 import SectionMarquee from '../components/SectionMarquee'
 import Subsection from '../components/Subsection'
 import BrandScroll from '../components/BrandScroll'
-import Drift from 'react-driftjs'
+
 import Banner from '../components/Banner'
 
 
 function Home() {
   return (
     <div>
-       <Drift appId="m7v62erik89n" />
+   
        <Banner />
       <div className='sticky top-0 z-50 mt-20 md:mt-12'>
     
