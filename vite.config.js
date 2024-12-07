@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['gsap'],
+      // Remove the external configuration for gsap
     },
   },
 });

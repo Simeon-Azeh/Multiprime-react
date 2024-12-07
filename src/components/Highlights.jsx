@@ -1,13 +1,14 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { rightImg, watchImg } from "../utils";
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { rightImg, watchImg } from '../utils';
 import VideoCarousel from './VideoCarousel';
-import { CirclePlay } from 'lucide-react';
-import { ChevronRight } from 'lucide-react';
+import { CirclePlay, ChevronRight } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {
-  useGSAP(() => {
+  useEffect(() => {
     gsap.to('#title', { opacity: 1, y: 0 });
     gsap.to('.link', { opacity: 1, y: 0, duration: 1, stagger: 0.25 });
   }, []);
@@ -23,7 +24,7 @@ const Highlights = () => {
               Watch the film
               <CirclePlay size={18} />
             </p>
-            <p className="text-gray-700 link dark:text-gray-300">
+            <p className="flex items-center gap-1 text-gray-700 link dark:text-gray-300">
               Watch the event
               <ChevronRight size={18} />
             </p>
