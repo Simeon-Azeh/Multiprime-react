@@ -23,6 +23,9 @@ importers:
       aos:
         specifier: ^2.3.4
         version: 2.3.4
+      gsap:
+        specifier: ^3.12.5
+        version: 3.12.5
       i18n-js:
         specifier: ^4.4.3
         version: 4.4.3
