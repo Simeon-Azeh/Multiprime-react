@@ -12,6 +12,7 @@ import Subsection from '../components/Subsection'
 import BrandScroll from '../components/BrandScroll'
 
 import Banner from '../components/Banner'
+import Highlights from '../components/Highlights'
 
 
 function Home() {
@@ -26,9 +27,13 @@ function Home() {
       <div>
         <Hero />
       </div>
+      <div>
+        <Highlights />
+      </div>
       <div >
         <Tabs />
       </div>
+     
       <div>
         <Services />
       </div>

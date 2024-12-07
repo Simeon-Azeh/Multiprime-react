@@ -15,32 +15,40 @@ import {
     {
       id: 1,
       textLists: [
-        "Enter A17 Pro.",
-        "Game‑changing chip.",
-        "Groundbreaking performance.",
+        "Dive into the world of music.",
+        "Capturing soulful melodies.",
+        "Showcasing Cameroon’s finest talent.",
       ],
       video: highlightFirstVideo,
       videoDuration: 4,
     },
     {
       id: 2,
-      textLists: ["Titanium.", "So strong. So light. So Pro."],
+      textLists: [
+        "Laughter, unlimited.",
+        "The home of Cameroon's rising comedians.",
+        "Spreading joy through creative comedy.",
+      ],
       video: highlightSecondVideo,
       videoDuration: 5,
     },
     {
       id: 3,
       textLists: [
-        "iPhone 15 Pro Max has the",
-        "longest optical zoom in",
-        "iPhone ever. Far out.",
+        "Empowering beauty and fashion.",
+        "A platform for aspiring models.",
+        "Showcasing elegance and talent.",
       ],
       video: highlightThirdVideo,
       videoDuration: 2,
     },
     {
       id: 4,
-      textLists: ["All-new Action button.", "What will yours do?."],
+      textLists: [
+        "Multiprime, where creativity meets innovation.",
+        "Redefining multimedia in Cameroon.",
+        "Your gateway to entertainment and art.",
+      ],
       video: highlightFourthVideo,
       videoDuration: 3.63,
     },
