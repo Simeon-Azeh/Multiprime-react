@@ -1,77 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import Pricing from '../components/Pricing';
+import Footer from '../components/footer';
+import MusicCard from '../components/MusicCard';
+import SearchAndFilter from '../components/SearchAndFilter';
+import MusicPlayerModal from '../components/MusicPlayerModal';
+
+const tracks = [
+  { id: 1, title: 'Trickstar', artist: 'Prime', price: 10, type: 'music', previewUrl: 'track1.mp3', spotifyUrl: '#', youtubeUrl: '#', buyUrl: '#', imageUrl: '/images/trickstar.png', description: 'Trickstar" blends old-school beats with modern production, featuring hard-hitting drums, catchy bass, and intricate urban melodies.', description2: 'Hip Hop' },
+  { id: 2, title: 'Hard drill', artist: 'Prime', price: 15, type: 'beats', previewUrl: 'track2.mp3', spotifyUrl: '#', youtubeUrl: '#', buyUrl: '#', imageUrl: '/images/hard_drille.png', description: '"Hard Drill" features deep 808s, sharp hi-hats, punchy snares, and dark melodies, creating intense, gritty drill energy.', description2: 'Drill' },
+  { id: 3, title: 'Time no dey', artist: 'Prime', price: 20, type: 'instrumentals', previewUrl: 'track3.mp3', spotifyUrl: '#', youtubeUrl: '#', buyUrl: '#', imageUrl: '/images/time_no_dey.png', description: '"TND" combines Afrobeat rhythms with Amapiano grooves, featuring rolling basslines, syncopated percussion, and lush, airy keys.', description2: 'Afrobeat' },
+
+  // Add more tracks as needed
+];
 
 function Releases() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filter, setFilter] = useState('');
+  const [selectedTrack, setSelectedTrack] = useState(null);
+
+  const filteredTracks = tracks.filter(track => {
+    const matchesSearch =
+      searchTerm === '' ||
+      track.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      track.artist.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      track.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      track.description.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesFilter = filter === '' || track.type === filter;
+
+    return matchesSearch && matchesFilter;
+  });
+
   return (
-    <div className="flex flex-col gap-8 lg:flex-row">
-      
-      {/* Main Content */}
-      <div className="w-full lg:w-3/4">
-        
-        {/* Tracks Section */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Tracks</h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {/* Sample Track Cards */}
-            <div className="p-4 bg-white rounded shadow dark:bg-dark-body">
-              <img src="/path/to/track-image.jpg" alt="Track" className="mb-2 rounded"/>
-              <h3 className="text-lg font-medium">Track Title</h3>
-              <p className="text-sm text-gray-500">Artist Name</p>
-            </div>
-          
-          </div>
-        </section>
-
-        {/* Instrumentals Section */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Instrumentals</h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {/* Sample Instrumental Cards */}
-            <div className="p-4 bg-white rounded shadow dark:bg-dark-body">
-              <img src="/path/to/instrumental-image.jpg" alt="Instrumental" className="mb-2 rounded"/>
-              <h3 className="text-lg font-medium">Instrumental Title</h3>
-              <p className="text-sm text-gray-500">Producer Name</p>
-            </div>
-            {/* Repeat for more instrumentals */}
-          </div>
-        </section>
-
-        {/* Popular Genre Section */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold">Popular Genres</h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {/* Sample Genre Cards */}
-            <div className="p-4 bg-white rounded shadow dark:bg-dark-body">
-              <img src="/path/to/genre-image.jpg" alt="Genre" className="mb-2 rounded"/>
-              <h3 className="text-lg font-medium">Genre Name</h3>
-              <p className="text-sm text-gray-500">Genre Description</p>
-            </div>
-            {/* Repeat for more genres */}
-          </div>
-        </section>
-
+    <div className="min-h-screen text-gray-900 bg-white dark:bg-dark-body dark:text-gray-100">
+      <div className="sticky top-0 z-50">
+        <Header />
       </div>
 
-      {/* Custom Music Player */}
-      <div className="sticky w-full lg:w-1/4 top-20">
-        <div className="p-4 bg-white rounded shadow dark:bg-dark-body">
-          <h2 className="mb-4 text-xl font-semibold">Now Playing</h2>
-          <div className="flex items-center mb-4">
-            <img src="/path/to/current-track.jpg" alt="Now Playing" className="w-16 h-16 mr-4 rounded"/>
-            <div>
-              <h3 className="text-lg font-medium">Track Title</h3>
-              <p className="text-sm text-gray-500">Artist Name</p>
-            </div>
-          </div>
-          <div className="mb-4">
-            <input type="range" className="w-full" />
-          </div>
-          <div className="flex items-center justify-between">
-            <button className="bg-[#FF5722] text-white p-2 rounded">Prev</button>
-            <button className="bg-[#FF5722] text-white p-2 rounded">Play/Pause</button>
-            <button className="bg-[#FF5722] text-white p-2 rounded">Next</button>
-          </div>
+      <div className="justify-center w-4/5 p-4 mx-auto pt-28 font-inter">
+        <SearchAndFilter
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          filter={filter}
+          setFilter={setFilter}
+        />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {filteredTracks.map(track => (
+            <MusicCard key={track.id} track={track} onClick={setSelectedTrack} />
+          ))}
         </div>
       </div>
+
+      <MusicPlayerModal
+        track={selectedTrack}
+        isOpen={!!selectedTrack}
+        onClose={() => setSelectedTrack(null)}
+      />
+
+      <Footer />
     </div>
   );
 }
