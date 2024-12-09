@@ -12,6 +12,7 @@ import Blog from './pages/Blog';
 import BlogDetail from './components/BlogDetails';
 import posts from './data/post';
 import ContactPage from './pages/Contact';
+import MovieReleases from './pages/Movies/Releases';
 
 function App() {
   
@@ -45,7 +46,7 @@ function ScrollToTop() {
      <Route path='/dance' element={<Dance/>} />
      <Route path='/movies/discover' element={<DiscoverMovies/>} />
     
-     <Route path='/movies/releases' element={<Releases/>} />
+     <Route path='/movies/releases' element={<MovieReleases/>} />
       <Route path='/contact' element={<ContactPage/>} />
 
      <Route path="/blog" element={<Blog posts={posts} />} />
