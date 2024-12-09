@@ -58,10 +58,10 @@ const posts = [
 export default function Blog() {
   return (
     <div className="py-24 bg-white dark:bg-dark-body sm:py-32 font-inter">
-      <div className="px-6 mx-auto max-w-7xl lg:px-8">
+      <div className="px-8 mx-auto md:w-4/5 md:px-0">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">From the blog</h2>
-          <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg/8">Learn how to grow your business with our expert advice.</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg/8">Discover our stories, learn how we stay in business.</p>
         </div>
         <div className="grid max-w-2xl grid-cols-1 pt-10 mx-auto mt-10 border-t border-gray-200 dark:border-gray-700 gap-x-8 gap-y-16 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
