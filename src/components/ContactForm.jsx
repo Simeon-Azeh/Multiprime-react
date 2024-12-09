@@ -3,9 +3,12 @@
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
 import { Field, Label, Switch } from '@headlessui/react'
+import { PhoneInput } from 'react-international-phone'
+import 'react-international-phone/style.css'
 
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false)
+  const [phone, setPhone] = useState('')
 
   return (
     <div className="px-6 py-24 bg-white dark:bg-dark-body font-inter isolate sm:py-32 lg:px-8">
@@ -22,7 +25,7 @@ export default function ContactForm() {
         />
       </div>
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 text-balance sm:text-5xl">Contact sales</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 text-balance sm:text-5xl">Contact sales</h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg/8">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
       </div>
       <form action="#" method="POST" className="max-w-xl mx-auto mt-16 sm:mt-20">
@@ -37,7 +40,7 @@ export default function ContactForm() {
                 name="first-name"
                 type="text"
                 autoComplete="given-name"
-                className="block w-full rounded-md bg-white dark:bg-gray-800 px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                className="block w-full rounded-md bg-white dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722]"
               />
             </div>
           </div>
@@ -51,7 +54,7 @@ export default function ContactForm() {
                 name="last-name"
                 type="text"
                 autoComplete="family-name"
-                className="block w-full rounded-md bg-white dark:bg-gray-800 px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                className="block w-full rounded-md bg-white dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722]"
               />
             </div>
           </div>
@@ -65,7 +68,7 @@ export default function ContactForm() {
                 name="company"
                 type="text"
                 autoComplete="organization"
-                className="block w-full rounded-md bg-white dark:bg-gray-800 px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                className="block w-full rounded-md bg-white dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722]"
               />
             </div>
           </div>
@@ -79,7 +82,7 @@ export default function ContactForm() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                className="block w-full rounded-md bg-white dark:bg-gray-800 px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                className="block w-full rounded-md bg-white dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722]"
               />
             </div>
           </div>
@@ -88,32 +91,19 @@ export default function ContactForm() {
               Phone number
             </label>
             <div className="mt-2.5">
-              <div className="flex rounded-md bg-white dark:bg-gray-800 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-                <div className="grid grid-cols-1 shrink-0 focus-within:relative">
-                  <select
-                    id="country"
-                    name="country"
-                    autoComplete="country"
-                    aria-label="Country"
-                    className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pl-3.5 pr-7 text-base text-gray-500 dark:text-gray-400 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  >
-                    <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                  </select>
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="self-center col-start-1 row-start-1 mr-2 text-gray-500 pointer-events-none dark:text-gray-400 size-5 justify-self-end sm:size-4"
-                  />
-                </div>
-                <input
-                  id="phone-number"
-                  name="phone-number"
-                  type="text"
-                  placeholder="123-456-7890"
-                  className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-0 sm:text-sm/6"
-                />
-              </div>
+            <PhoneInput
+        defaultCountry="CMR"
+        value={phone}
+        onChange={setPhone}
+        className=" w-full flex rounded-md bg-white dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722]"
+        inputProps={{
+          className:
+            'block w-full border-0 bg-transparent px-3 py-2 text-base text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-0 focus:outline-none',
+        }}
+        dropdownClassName="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg max-h-60 overflow-auto"
+        buttonClassName="text-gray-600 dark:text-gray-400 border-0 bg-transparent focus:outline-none"
+        flagClassName="h-5 w-5 bg-white dark:bg-gray-800"
+      />
             </div>
           </div>
           <div className="sm:col-span-2">
@@ -125,7 +115,7 @@ export default function ContactForm() {
                 id="message"
                 name="message"
                 rows={4}
-                className="block w-full rounded-md bg-white dark:bg-gray-800 px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                className="block w-full rounded-md bg-white dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722]"
                 defaultValue={''}
               />
             </div>
@@ -135,7 +125,7 @@ export default function ContactForm() {
               <Switch
                 checked={agreed}
                 onChange={setAgreed}
-                className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 dark:bg-gray-700 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 data-[checked]:bg-indigo-600"
+                className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 dark:bg-gray-700 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5722] data-[checked]:bg-[#FF5722]"
               >
                 <span className="sr-only">Agree to policies</span>
                 <span
@@ -146,7 +136,7 @@ export default function ContactForm() {
             </div>
             <Label className="text-gray-600 dark:text-gray-400 text-sm/6">
               By selecting this, you agree to our{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+              <a href="#" className="font-semibold text-[#FF5722]">
                 privacy&nbsp;policy
               </a>
               .
@@ -156,7 +146,7 @@ export default function ContactForm() {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full rounded-md bg-[#FF5722] dark:bg-transparent dark:border dark:border-gray-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5722]"
           >
             Let's talk
           </button>
