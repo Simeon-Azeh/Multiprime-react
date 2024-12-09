@@ -9,14 +9,14 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-light-body dark:bg-dark-body text-light-text dark:text-white py-10 font-inter">
-      <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+    <footer className="py-10 bg-light-body dark:bg-dark-body text-light-text dark:text-white font-inter">
+      <div className="grid w-4/5 grid-cols-1 gap-16 pt-4 pb-4 mx-auto mb-4 border-t dark:border-gray-700 md:grid-cols-4">
         <div className="col-span-1">
-          <h2 className="text-2xl font-medium mb-4">Multi_prime</h2>
+          <h2 className="mb-4 text-2xl font-medium">Multi_prime</h2>
         </div>
 
-        <div className="col-span-1 flex flex-col items-center">
-          <h3 className="text-xl font-medium mb-4">{t('quickLinks')}</h3>
+        <div className="flex flex-col items-center col-span-1">
+          <h3 className="mb-4 text-xl font-medium">{t('quickLinks')}</h3>
           <ul className="space-y-2 text-center">
             <li><a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors">{t('home')}</a></li>
             <li><a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors">{t('music')}</a></li>
@@ -28,8 +28,8 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-span-1 flex flex-col items-center">
-          <h3 className="text-xl font-medium mb-4">{t('help')}</h3>
+        <div className="flex flex-col items-center col-span-1">
+          <h3 className="mb-4 text-xl font-medium">{t('help')}</h3>
           <ul className="space-y-2 text-center">
             <li><a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors">{t('faqs')}</a></li>
             <li><a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors">{t('terms')}</a></li>
@@ -41,9 +41,9 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-span-1 flex flex-col lg:ml-8 items-center">
-          <h3 className="text-xl font-medium mb-4">{t('followUs')}</h3>
-          <div className="space-y-4 text-center flex flex-col justify-center items-center lg:items-start">
+        <div className="flex flex-col items-center col-span-1 lg:ml-8">
+          <h3 className="flex justify-start mb-4 text-xl font-medium text-left">{t('followUs')}</h3>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center lg:items-start">
             <a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors flex items-center gap-2"><FaFacebookF />Facebook</a>
             <a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors flex items-center gap-2"><FaXTwitter /> (formerly Twitter)</a>
             <a href="#" className="hover:text-[#FF5722] dark:hover:text-gray-300 font-medium text-light-text dark:text-white transition-colors flex items-center gap-2"><FaInstagram /> Instagram</a>
@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full mt-8 text-center border-t border-gray-300 border-solid dark:border-gray-700 pt-4 flex flex-col lg:flex-row gap-2 items-center justify-center">
+      <div className="flex flex-col items-center justify-center w-full gap-2 pt-4 mt-8 text-center border-t border-gray-300 border-solid dark:border-gray-700 lg:flex-row">
 
         <div className='flex gap-4'>
         <p className="text-sm">{t('termsAndConditions')}</p>

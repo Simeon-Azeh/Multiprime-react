@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Pricing from '../components/Pricing';
-import Footer from '../components/footer';
-import MusicCard from '../components/MusicCard';
-import SearchAndFilter from '../components/SearchAndFilter';
-import MusicPlayerModal from '../components/MusicPlayerModal';
+import Header from '../../components/Header';
+import Pricing from '../../components/Pricing';
+import Footer from '../../components/footer';
+import MusicCard from '../../components/MusicCard';
+import SearchAndFilter from '../../components/SearchAndFilter';
+import MusicPlayerModal from '../../components/MusicPlayerModal';
 
 const tracks = [
   { id: 1, title: 'Trickstar', artist: 'Prime', price: 10, type: 'music', previewUrl: 'track1.mp3', spotifyUrl: '#', youtubeUrl: '#', buyUrl: '#', imageUrl: '/images/trickstar.png', description: 'Trickstar" blends old-school beats with modern production, featuring hard-hitting drums, catchy bass, and intricate urban melodies.', description2: 'Hip Hop' },
@@ -38,7 +38,7 @@ function Releases() {
         <Header />
       </div>
 
-      <div className="justify-center w-4/5 p-4 mx-auto pt-28 font-inter">
+      <div className="justify-center p-4 px-8 mx-auto md:w-4/5 pt-28 font-inter md:px-0">
         <SearchAndFilter
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}

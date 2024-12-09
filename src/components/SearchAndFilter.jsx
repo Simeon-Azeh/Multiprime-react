@@ -13,7 +13,7 @@ const SearchAndFilter = ({ searchTerm, setSearchTerm, filter, setFilter }) => {
           placeholder="Search..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-2 pl-10 text-gray-900 bg-white border rounded-lg dark:bg-dark-body dark:text-gray-100 focus:outline-none focus:ring-2 "
+          className="w-full p-2 pl-10 text-gray-900 bg-white border rounded-lg dark:bg-dark-body dark:text-gray-100 dark:border-gray-700 focus:outline-none focus:ring-1 focus:border-gray-900"
         />
       </div>
 
@@ -23,7 +23,7 @@ const SearchAndFilter = ({ searchTerm, setSearchTerm, filter, setFilter }) => {
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="w-full p-2 pl-10 text-gray-900 bg-white border rounded-lg dark:bg-dark-body dark:text-gray-100 focus:outline-none focus:ring-2 "
+          className="w-full p-2 pl-10 text-gray-900 bg-white border rounded-lg dark:bg-dark-body dark:text-gray-100 focus:outline-none focus:ring-1 dark:border-gray-700 focus:border-gray-900"
         >
           <option value="">All</option>
           <option value="music">Music</option>

@@ -15,7 +15,7 @@ const MusicCard = ({ track, onClick }) => {
         {track.title}
       </h3>
       <p className="font-normal text-dark-body dark:text-slate-300 font-sm ">{track.artist}</p>
-      <p className="text-slate-50">${track.price}</p>
+      <p className="font-medium text-orange-500 dark:text-slate-50">${track.price}</p>
     </div>
   );
 };
