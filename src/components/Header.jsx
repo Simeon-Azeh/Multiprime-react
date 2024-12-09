@@ -111,16 +111,16 @@ function Header() {
                 <Link to="/music/discover">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('discover')}</span>
                 </Link>
-                <Link to="/releases">
+                <Link to="/music/releases">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('releases')}</span>
                 </Link>
-                <Link to="/portfolio">
+                <Link to="/music/profiles">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('profiles')}</span>
                 </Link>
               </div>
             )}
           </div>
-          <Link to="/services">
+          <Link to="/dance">
             <span className="hover:border-b-2 border-[#FF5722] dark:border-gray-400 dark:border-solid">{t('dance')}</span>
           </Link>
           <div className="relative">
