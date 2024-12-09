@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/footer';
 import Banner from '../components/Banner';
 import ContactForm from '../components/ContactForm';
+import SubscribeNews from '../components/SubscribeNew';
 
 
 function ContactPage() {
@@ -15,6 +16,9 @@ function ContactPage() {
       </div>
      <div>
         <ContactForm />
+     </div>
+     <div>
+        <SubscribeNews />
      </div>
       <div>
         <Footer />
