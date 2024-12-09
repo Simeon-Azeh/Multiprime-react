@@ -9,6 +9,9 @@ import DiscoverMovies from './pages/Movies/Discover';
 import Profile from './pages/Music/Profile';
 import Dance from './pages/Dance';
 import Blog from './pages/Blog';
+import BlogDetail from './components/BlogDetails';
+import posts from './data/post';
+import ContactPage from './pages/Contact';
 
 function App() {
   
@@ -43,9 +46,11 @@ function ScrollToTop() {
      <Route path='/movies/discover' element={<DiscoverMovies/>} />
     
      <Route path='/movies/releases' element={<Releases/>} />
+      <Route path='/contact' element={<ContactPage/>} />
 
-
-     <Route path='/blog' element={<Blog/>} />
+     <Route path="/blog" element={<Blog posts={posts} />} />
+    
+     <Route path="/blog/:id" element={<BlogDetail posts={posts} />} />
     </Routes>
   </BrowserRouter>
   )
