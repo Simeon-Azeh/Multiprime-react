@@ -96,5 +96,7 @@
 
   "about_prime": "Oui, ce baton a été fait par Multiprime.",
   "about_description": "Centaines d'artiste ont trouvés leur carré parfait avec Multiprime.",
-  "about_btn": "Votre prochain baton est en cours"
+  "about_btn": "Votre prochain baton est en cours",
+  "discover_primemovies": "",
+  "primemovies_description": ""
 }

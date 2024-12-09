@@ -130,10 +130,10 @@ function Header() {
             </button>
             {moviesDropdownOpen && (
               <div className="absolute dark:bg-[#1a1818] dark:text-white py-2 mt-2 space-y-2 rounded border bg-white text-[#414760] dark:border-gray-600 dark:border-solid">
-                <Link to="/resume">
+                <Link to="/movies/discover">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('discover')}</span>
                 </Link>
-                <Link to="/portfolio">
+                <Link to="/movies/releases">
                   <span className="block py-2 px-4 hover:text-[#FF5722] dark:hover:text-slate-300">{t('releases')}</span>
                 </Link>
               </div>
@@ -142,7 +142,7 @@ function Header() {
           <Link to="/contact">
             <span className="hover:border-b-2 border-[#FF5722] dark:border-gray-400 dark:border-solid">{t('modelling')}</span>
           </Link>
-          <Link to="/contact">
+          <Link to="/blog">
             <span className="hover:border-b-2 border-[#FF5722] dark:border-gray-400 dark:border-solid">{t('blog')}</span>
           </Link>
           <Link to="/contact">

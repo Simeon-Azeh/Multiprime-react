@@ -5,8 +5,10 @@ import './routes/i18n'; // Import i18n configuration
 import Home from './pages/Home';
 import Releases from './pages/Music/Releases';
 import Discover from './pages/Music/Discover';
+import DiscoverMovies from './pages/Movies/Discover';
 import Profile from './pages/Music/Profile';
 import Dance from './pages/Dance';
+import Blog from './pages/Blog';
 
 function App() {
   
@@ -38,6 +40,12 @@ function ScrollToTop() {
      <Route path='/music/releases' element={<Releases/>} />
      <Route path='/music/profiles' element={<Profile/>} />
      <Route path='/dance' element={<Dance/>} />
+     <Route path='/movies/discover' element={<DiscoverMovies/>} />
+    
+     <Route path='/movies/releases' element={<Releases/>} />
+
+
+     <Route path='/blog' element={<Blog/>} />
     </Routes>
   </BrowserRouter>
   )
