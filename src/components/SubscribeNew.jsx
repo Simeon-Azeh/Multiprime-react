@@ -1,6 +1,50 @@
+import { useState } from 'react';
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
+import { getFirestore, collection, addDoc, query, where, getDocs } from 'firebase/firestore';
+import { app } from '../Firebase/firebase'; // Ensure you have the Firebase app initialized
+import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
+
+const db = getFirestore(app);
 
 export default function SubscribeNews() {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    setSuccess(false);
+
+    try {
+      // Query to check if the email already exists
+      const q = query(collection(db, 'subscriptions'), where('email', '==', email));
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        // If the email already exists, show an error message and stop further processing
+        setError('This email is already subscribed.');
+        setLoading(false);
+        return;
+      }
+
+      // Proceed to add the new subscription if email does not exist
+      await addDoc(collection(db, 'subscriptions'), {
+        email,
+        subscribedAt: new Date(),
+      });
+      setSuccess(true);
+      setEmail('');
+    } catch (err) {
+      setError('Failed to subscribe. Please try again.');
+      console.error('Error adding document: ', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="relative py-16 overflow-hidden bg-white dark:bg-dark-body isolate sm:py-24 lg:py-32">
       <div className="px-8 mx-auto md:w-4/5 md:px-0 font-inter">
@@ -13,7 +57,7 @@ export default function SubscribeNews() {
               Get the latest updates, insights, and tips delivered straight to your inbox. Join our growing community
               and stay informed on topics that matter to you.
             </p>
-            <div className="flex max-w-md mt-6 gap-x-4">
+            <form onSubmit={handleSubmit} className="flex max-w-md mt-6 gap-x-4">
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
@@ -24,15 +68,20 @@ export default function SubscribeNews() {
                 required
                 placeholder="Enter your email"
                 autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="min-w-0 flex-auto rounded-md bg-transparent dark:bg-transparent px-3.5 py-2 text-base text-gray-900 dark:text-white outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-800 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#FF5722] sm:text-sm/6"
               />
               <button
                 type="submit"
                 className="flex-none rounded-md bg-[#FF5722] dark:bg-transparent dark:border dark:border-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                disabled={loading}
               >
-                Subscribe
+                {loading ? 'Subscribing...' : 'Subscribe'}
               </button>
-            </div>
+            </form>
+            {success && <p className="flex items-center gap-2 p-2 px-6 mt-4 text-sm text-green-600 rounded-md bg-slate-100 dark:bg-gray-800 dark:text-white"><IoMdCheckmarkCircleOutline /> Thank you for subscribing! It means alot.</p>}
+            {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
             <div className="flex flex-col items-start">
