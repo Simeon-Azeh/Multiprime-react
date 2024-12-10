@@ -139,7 +139,7 @@ function Header() {
               </div>
             )}
           </div>
-          <Link to="/contact">
+          <Link to="/modelling">
             <span className="hover:border-b-2 border-[#FF5722] dark:border-gray-400 dark:border-solid">{t('modelling')}</span>
           </Link>
           <Link to="/blog">

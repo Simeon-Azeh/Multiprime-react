@@ -13,6 +13,7 @@ import BlogDetail from './components/BlogDetails';
 import posts from './data/post';
 import ContactPage from './pages/Contact';
 import MovieReleases from './pages/Movies/Releases';
+import Modelling from './pages/Modelling';
 
 function App() {
   
@@ -47,6 +48,7 @@ function ScrollToTop() {
      <Route path='/movies/discover' element={<DiscoverMovies/>} />
     
      <Route path='/movies/releases' element={<MovieReleases/>} />
+      <Route path='/modelling' element={<Modelling/>} />
       <Route path='/contact' element={<ContactPage/>} />
 
      <Route path="/blog" element={<Blog posts={posts} />} />
