@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-import { app } from '../Firebase/firebase'; // Ensure you have the Firebase app initialized
+import { app } from '../Firebase/firebase'; // Ensure Firebase app is initialized
 
 const db = getFirestore(app);
 
@@ -32,15 +32,6 @@ const BlogDetail = () => {
 
     fetchPost();
   }, [id]);
-
-  const splitDescription = (text, wordLimit) => {
-    const words = text.split(' ');
-    const paragraphs = [];
-    for (let i = 0; i < words.length; i += wordLimit) {
-      paragraphs.push(words.slice(i, i + wordLimit).join(' '));
-    }
-    return paragraphs;
-  };
 
   if (loading) {
     return (
@@ -93,7 +84,7 @@ const BlogDetail = () => {
           {/* Header */}
           <header className="space-y-4">
             <time
-              dateTime={post.datePosted}
+              dateTime={post.createdAt}
               className="block text-sm tracking-wide text-gray-500 uppercase dark:text-gray-400"
             >
               {post.datePosted}
@@ -103,12 +94,49 @@ const BlogDetail = () => {
             </h1>
           </header>
 
-          {/* Content */}
-          <div className="space-y-6 leading-relaxed prose text-gray-700 dark:prose-invert max-w-none dark:text-gray-400">
-            {splitDescription(post.description, 50).map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+          {/* Description and Sub-Description */}
+          <div className="leading-relaxed prose text-gray-700 dark:prose-invert max-w-none dark:text-gray-400">
+            <p>{post.description}</p>
+            <h2 className="mt-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">
+              Sub-Description
+            </h2>
+            <p>{post.subDescription}</p>
           </div>
+
+          {/* List Items */}
+          <div className="mt-8">
+            <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">
+              Key Points:
+            </h3>
+            <ul className="pl-6 space-y-2 text-gray-700 list-disc dark:text-gray-400">
+              {post.listItems.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Links */}
+          {post.links && post.links.length > 0 && (
+            <div className="mt-8">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">
+                Related Links:
+              </h3>
+              <ul className="space-y-2 list-none">
+                {post.links.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link}
+                      className="text-blue-500 hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Footer */}
           <footer className="flex items-center pt-6 border-t border-gray-200 gap-x-4 dark:border-gray-700">
@@ -118,8 +146,12 @@ const BlogDetail = () => {
               className="object-cover w-16 h-16 rounded-full shadow-md"
             />
             <div>
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">{post.userName}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{post.time}</p>
+              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                {post.userName}
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Posted at {post.timePosted}
+              </p>
             </div>
           </footer>
         </article>

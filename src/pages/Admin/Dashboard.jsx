@@ -46,6 +46,30 @@ const Dashboard = () => {
   const [error, setError] = useState('');
   const [userName, setUserName] = useState('');
   const [userAvatar, setUserAvatar] = useState('');
+  const [subDescription, setSubDescription] = useState('');
+    const [links, setLinks] = useState(['']);
+    const [listItems, setListItems] = useState(['']);
+    
+
+    const handleAddLink = () => {
+        setLinks([...links, '']);
+      };
+      
+      const handleLinkChange = (index, value) => {
+        const newLinks = [...links];
+        newLinks[index] = value;
+        setLinks(newLinks);
+      };
+      
+      const handleAddListItem = () => {
+        setListItems([...listItems, '']);
+      };
+      
+      const handleListItemChange = (index, value) => {
+        const newListItems = [...listItems];
+        newListItems[index] = value;
+        setListItems(newListItems);
+      };
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -107,30 +131,36 @@ const Dashboard = () => {
     try {
       await addDoc(collection(db, 'blogs'), {
         title: blogTitle,
-        time: blogTime,
-        type: blogType,
-        description: blogDescription,
-        date: blogDate,
-        timePosted: timePosted,
-        datePosted: datePosted,
-        userName: userName,
-        userAvatar: userAvatar,
-        createdAt: new Date(),
+      time: blogTime,
+      type: blogType,
+      description: blogDescription,
+      subDescription: subDescription,
+      links: links,
+      listItems: listItems,
+      date: blogDate,
+      timePosted: timePosted,
+      datePosted: datePosted,
+      userName: userName,
+      userAvatar: userAvatar,
+      createdAt: new Date(),
       });
       setSuccess(true);
-      setBlogTitle('');
-      setBlogTime('');
-      setBlogType('');
-      setBlogDescription('');
-      setBlogDate('');
-      setIsBlogModalOpen(false);
-    } catch (err) {
-      setError('Failed to create blog. Please try again.');
-      console.error('Error adding document: ', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+    setBlogTitle('');
+    setBlogTime('');
+    setBlogType('');
+    setBlogDescription('');
+    setSubDescription('');
+    setLinks(['']);
+    setListItems(['']);
+    setBlogDate('');
+    setIsBlogModalOpen(false);
+  } catch (err) {
+    setError('Failed to create blog. Please try again.');
+    console.error('Error adding document: ', err);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="flex">
@@ -365,6 +395,48 @@ const Dashboard = () => {
                         className="block w-full h-40 px-4 mt-1 bg-transparent border border-gray-800 rounded-md shadow-sm sm:text-sm"
                       />
                     </div>
+                    <div className="mt-2">
+    <label htmlFor="subDescription" className="block text-sm font-medium text-white">
+      Sub Description
+    </label>
+    <textarea
+      id="subDescription"
+      name="subDescription"
+      value={subDescription}
+      onChange={(e) => setSubDescription(e.target.value)}
+      className="block w-full h-20 px-4 mt-1 bg-transparent border border-gray-800 rounded-md shadow-sm sm:text-sm"
+    />
+  </div>
+  <div className="mt-2">
+    <label className="block text-sm font-medium text-white">Links</label>
+    {links.map((link, index) => (
+      <input
+        key={index}
+        type="url"
+        value={link}
+        onChange={(e) => handleLinkChange(index, e.target.value)}
+        className="block w-full h-10 px-4 mt-1 bg-transparent border border-gray-800 rounded-md shadow-sm sm:text-sm"
+      />
+    ))}
+    <button type="button" onClick={handleAddLink} className="mt-2 text-sm text-blue-500">
+      Add another link
+    </button>
+  </div>
+  <div className="mt-2">
+    <label className="block text-sm font-medium text-white">List Items</label>
+    {listItems.map((item, index) => (
+      <input
+        key={index}
+        type="text"
+        value={item}
+        onChange={(e) => handleListItemChange(index, e.target.value)}
+        className="block w-full h-10 px-4 mt-1 bg-transparent border border-gray-800 rounded-md shadow-sm sm:text-sm"
+      />
+    ))}
+    <button type="button" onClick={handleAddListItem} className="mt-2 text-sm text-blue-500">
+      Add another list item
+    </button>
+  </div>
                     <div className="mt-2">
                       <label htmlFor="blogDate" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                         Blog Date
