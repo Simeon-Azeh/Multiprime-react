@@ -98,8 +98,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex items-center justify-between p-4 text-white bg-[#1B1B1A] font-inter border-b border-gray-800">
-      <div className="text-xl font-medium">Hello,</div>
+    <div className="flex items-center justify-between p-4 text-white bg-[#1B1B1A] font-inter border-b border-gray-800 sticky top-0 z-20">
+      <div className="text-xl font-medium">Hello, {userName}</div>
       <div className="relative flex items-center">
         {userAvatar ? (
           <img

@@ -4,16 +4,16 @@ import VideoCard from './VideoCard';
 
 const videos = [
   {
-    id: 'xTlNMmZKwpA', // Replace with a YouTube video ID
-    title: 'Dance Performance 1',
+    id: 'MzuPKIa7hFg', // Replace with a YouTube video ID
+    title: 'Panther Rany - Dirty Vibes',
   },
   {
-    id: 'LXb3EKWsInQ',
-    title: 'Dance Performance 2',
+    id: '5sZh_lRann0',
+    title: 'Nasc V - Love Pill',
   },
   {
-    id: 'E7wJTI-1dvQ',
-    title: 'Dance Performance 3',
+    id: 'PHWLMoCeVCE',
+    title: 'Mel Vimin - You are not alone',
   },
 ];
 

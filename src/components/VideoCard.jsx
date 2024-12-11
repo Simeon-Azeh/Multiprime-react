@@ -13,7 +13,7 @@ const VideoCard = ({ video }) => {
     <div>
       {/* Video Card */}
       <div
-        className="relative w-full p-4 bg-white rounded-lg shadow-md cursor-pointer dark:bg-[#1B1B1A] dark:text-gray-300 hover:scale-105 transform transition duration-300 dark:border-gray-700 border dark:border dark:border-solid dark:hover:border-gray-500"
+        className="relative w-full p-4 bg-white rounded-lg shadow-md cursor-pointer dark:bg-[#1B1B1A] dark:text-gray-300 hover:scale-105 transform transition duration-300 dark:border-gray-700 border dark:border dark:border-solid dark:hover:border-gray-500 font-inter"
         onClick={handleModalToggle}
       >
         <img
@@ -29,7 +29,7 @@ const VideoCard = ({ video }) => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-md">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-md font-inter">
           <div
             className="relative w-full max-w-6xl p-8 bg-white rounded-lg dark:bg-[#1B1B1A] dark:text-gray-300"
             style={{ animation: 'fadeIn 0.3s ease-in-out' }}

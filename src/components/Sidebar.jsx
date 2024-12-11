@@ -5,7 +5,7 @@ import { FaHome, FaVideo, FaBlog, FaEnvelope, FaCalendarAlt } from 'react-icons/
 
 const Sidebar = () => {
   return (
-    <div className="w-64 h-screen text-white bg-[#1B1B1A] border-r border-gray-800">
+    <div className="w-64 h-screen text-white bg-[#1B1B1A] border-r border-gray-800 overflow-hidden fixed top-0 left-0">
       <div className="px-8 py-12 text-xl font-medium font-montserrat-alt ">
         Multi-Prime
       </div>

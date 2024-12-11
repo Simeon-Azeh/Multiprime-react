@@ -18,7 +18,7 @@ function Dance() {
        
         <VideoGallery />
         <button className='flex px-6 py-2 mx-auto mt-6 font-normal border rounded font-inter dark:border-gray-800 text-dark-body dark:text-slate-50'>
-            <a href="https://www.youtube.com/channel/UCJFZDBl7YQv9Y5wV7Ew9aCg" target="_blank" rel="noopener noreferrer">
+            <a href="http://www.youtube.com/@multiprime8986" target="_blank" rel="noopener noreferrer">
                 Watch More
             </a>
         </button>
